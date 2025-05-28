@@ -1,7 +1,7 @@
 <template>
 
   <!-- NAVBAR PRINCIPAL -->
-  <nav class="navbar navbar-expand-lg bg-light sticky-top">
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm sticky-top ">
     <div class="container-fluid navbar-content">
       <!-- LOGO -->
       <router-link class="navbar-brand" :to="{ path: '/inicio' }">
@@ -53,9 +53,9 @@
             </ul>
           </li>
 
-          <li class="nav-item">
+         <!--  <li class="nav-item">
             <router-link class="nav-link custom-link" :to="{ path: '/acercade' }">Acerca de</router-link>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link custom-link" :to="{ path: '/contacto' }">Contacto</router-link>
           </li>
@@ -97,5 +97,8 @@
 
 .custom-link:hover {
   color: #6cc7ee !important;
+}
+.mi-navbarr{
+  background-color: #5694d2; /* ejemplo: gris oscuro */
 }
 </style>
