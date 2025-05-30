@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegura que no se desborde horizontalmente */
+body {
+  overflow-x: hidden;
+}
+
+/* Contenedor del banner */
+.topbar {
+  width: 100%;
+  background-color: #212529;
+  overflow-x: hidden;
+} 
+
+/* Banner con imagen de fondo responsive */
+.bannerinicio {
+  background-image: url('/src/assets/fondoinicio.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70vh;
+  width: 100%;
+  padding: 0 5%;
+  position: relative;
+}
+
+/* Texto del banner */
+.textobanner {
+  color: white;
+  z-index: 2;
+  font-size: 2.9rem;
+  font-weight: bold;
+  max-width: 600px;
+  margin-left: 70px;
+  text-align: justify;
+}
+
+/* Títulos responsivos */
+.textobanner h1 {
+  font-size: 4rem;
+  margin: 0;
+  white-space: nowrap;
+  /* Evita salto de línea para que esté todo junto */
+}
+
+.naranja {
+  color: #eb812f;
+  font-weight: 700;
+}
+
+/* Botón */
+.botonbanner{
+  background-color: #1998d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.botonbanner:hover {
+  background-color: #186db8;
+}
+
+
+.descripcion-categorias {
+  font-size: 1.5rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.2; /* más pegado verticalmente */
+  margin-bottom: 2px;
+ 
+}
+
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .bannerinicio {
+    height: 50vh;
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .textobanner {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .textobanner h1 {
+    font-size: 2.2rem;
+    white-space: normal;
+    /* Permite saltos en móvil para que no se corte */
+  }
+
+  .botonbanner {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+/* === ESTILOS CATEGORÍAS === */
+
+.categorias {
+  padding: 40px 20px;
+  background-color: #f7fafa; 
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #212529;
+  padding-top: 80px;
+}
+
+.titulo-categorias {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #212529;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* antes 220px, ahora más pequeñas */
+  gap: 15px; /* un poco menos espacio */
+  padding-top: 50px; /* ligeramente menos */
+}
+
+.card-categoria {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  padding: 10px; /* un poco de padding interno para que no queden muy ajustadas */
+}
+
+.card-categoria:hover {
+  transform: translateY(-5px);
+}
+
+.card-categoria img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  display: block;
+  aspect-ratio: 1 / 1; /* imagen cuadrada */
+}
+
+.card-categoria h3 {
+  padding: 10px 10px 15px 10px; /* menos padding */
+  font-size: 1rem; /* un poco más pequeño */
+  color: #706f6f;
+}
+
+/* Responsive para pantallas pequeñas */
+
+@media (max-width: 480px) {
+  .grid-categorias {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    padding-top: 30px;
+  }
+
+  .card-categoria h3 {
+    font-size: 0.85rem;
+    padding: 6px 6px 10px 6px;
+  }
+}
+
+
+/* Subasta estilo horizontal */
+.subasta-horizontal {
+  margin-top: 6rem; /*  Esto baja la sección */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem; 
+}
+
+/*  */
+.linea1{
+    color:#383838;
+    font-size: 2.1rem;
+     text-align: center;
+    
+   
+}
+.linea2{
+    color:#ea5324;
+    font-size: 2.1rem;
+    text-align: center;
+}
+.boton-subasta {
+  background-color: #e44d26;
+  border-radius: 1rem;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 10px 20px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-subasta:hover {
+  background-color: #f26835;
+}
+
+.grid-marcas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  justify-items: center;
+}
+
+.card-marca {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 150px;
+}
+
+.card-marca img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  
+}
+
+.card-marca h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+.titulo-marcasModelos {
+  font-size: 3rem;
+  margin-top: 90px;
+  text-align: center;
+  color: #212529;
+  font-weight: bold;
+}
+
+.grid-marcas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-marcas img {
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive: cambia la cantidad de columnas en pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .grid-marcas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-marcas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-marcas {
+    grid-template-columns: 1fr;
+  }
+}
+.grid-marcas div:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+

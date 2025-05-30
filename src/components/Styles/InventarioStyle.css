@@ -1,0 +1,216 @@
+/* Estilos generales */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asegura que no se desborde horizontalmente */
+body {
+    overflow-x: hidden;
+}
+
+/* Contenedor del banner */
+.topbar {
+    width: 100%;
+    background-color: #212529;
+    overflow-x: hidden;
+}
+
+/* Banner con imagen de fondo responsive */
+.bannerinicioInvetario {
+    background-image: url('/src/assets/inventarioBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40vh;
+    /* se adapta a la altura del viewport */
+    width: 100%;
+    padding: 0 5%;
+    position: relative;
+}
+
+/*Texto de la categoria a la izquierda*/
+
+.mov {
+    margin-top: 10px;
+}
+
+.catego1 {
+    font-weight: bold;
+    color: #2f2f2f;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 50px;
+}
+
+.accordion-button {
+    background-color: #f3f3f3;
+    color: #13213c;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #1998d4;
+    color: white;
+}
+
+.accordion-body ul li {
+    padding: 5px 0;
+    color: #555;
+}
+
+/* NUEVO: estilos para ítems seleccionables */
+.selectable-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.selectable-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* .selectable-item.active {
+    background-color: #262f69;
+    color: white;
+    font-weight: bold;
+} */
+
+/* Texto del banner */
+.textobanner1 {
+    color: white;
+    z-index: 2;
+    font-size: 2.7rem;
+    font-weight: bold;
+    max-width: 600px;
+    margin-left: 80px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Títulos responsivos */
+.textobanner1 h1 {
+    font-size: 4rem;
+    margin: 0;
+    white-space: nowrap;
+    
+    /* Evita salto de línea para que esté todo junto */
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    .bannerinicioInvetario {
+        height: 50vh;
+        padding: 0 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .textobanner1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    .textobanner1 h1 {
+        font-size: 2.2rem;
+        white-space: normal;
+        /* Permite saltos en móvil para que no se corte */
+    }
+
+    .botonbanner1 {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+/* === ESTILOS MACQUINARIA DISPONIBLE === */
+
+.back {
+    background-color: #f9f9f9;
+}
+
+.llamar {
+    font-weight: bold;
+    color: rgb(241, 107, 11);
+    margin-top: 8px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.nombre {
+    color: #0f0f0f;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.precio {
+    font-weight: bold;
+    color: rgb(241, 107, 11);
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
+
+.cate {
+    color: #706f6f;
+    font-size: 1.2rem;
+    margin-top: px;
+}
+
+.card-categoria1 {
+    padding: 10px;
+}
+
+/*Macdisponible es el cuandro donde estan metidas las cards y el diseño */
+.macdisponible {
+    padding: 40px 30px;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    /* antes tenía 30px */
+    color: #212529;
+    padding-top: 20px;
+}
+
+.grid-categorias1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.card-categoria1 {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.card-categoria1:hover {
+    transform: translateY(-5px);
+}
+
+.card-categoria1 img {
+    width: 100%;
+    /* Que ocupe todo el ancho del contenedor */
+    height: auto;
+    /* Altura automática para mantener proporción */
+    object-fit: cover;
+    /* Para que la imagen recorte bien y cubra el área */
+    aspect-ratio: 4 / 3;
+    /* Relación de aspecto para que la altura se ajuste proporcionalmente */
+    border-radius: 12px 12px 0 0;
+    /* Opcional, para que las esquinas coincidan con la card */
+    display: block;
+    /* Para eliminar espacio abajo si es img inline */
+    aspect-ratio: 1 / 1;
+
+}

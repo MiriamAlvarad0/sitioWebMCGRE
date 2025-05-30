@@ -1,3 +1,8 @@
+<script setup>
+import "../Styles/HeaderStyle.css"
+</script>
+
+
 <template>
     <nav aria-label="">
         <ol class="">
@@ -21,8 +26,4 @@
 </script>
 
 
-<style scoped>
-   
-   
-   
-</style>
+

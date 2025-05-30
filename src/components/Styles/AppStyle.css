@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilos globales para prevenir desbordamiento y asegurar adaptación */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Contenedor principal para todo el layout */
+.layout-container {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0 auto;
+}

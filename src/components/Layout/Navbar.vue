@@ -1,5 +1,8 @@
-<template>
+<script setup>
+import "../Styles/NavbarStyle.css"
+</script>
 
+<template>
   <!-- NAVBAR PRINCIPAL -->
   <nav class="navbar navbar-expand-lg bg-light shadow-sm sticky-top ">
     <div class="container-fluid navbar-content">
@@ -64,41 +67,3 @@
     </div>
   </nav>
 </template>
-
-<style scoped>
-.logo {
-  max-height: 80px;
-  margin-left: 70px;
-}
-
-.menu-container {
-  justify-content: center;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 100px; /* aumenté el gap para más separación */
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-}
-@media (max-width: 991px) {
-  .navbar-nav {
-    gap: 15px; /* menos separación en móvil para que no quede muy amplio */
-  }
-}
-
-.custom-link {
-  font-size: 1.1rem;
-  color: #050505 !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.custom-link:hover {
-  color: #6cc7ee !important;
-}
-.mi-navbarr{
-  background-color: #5694d2; /* ejemplo: gris oscuro */
-}
-</style>

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footer {
+  background-color: #13213c;
+  color: white;
+  padding: 2rem;
+  
+}
+.footer-column:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.footer-columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.footer-column {
+  flex: 1;
+  min-width: 100px;
+}
+
+.footer-column h4 {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.logoBlanco {
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+  align-items: center;
+}
+.txt1{
+ color: white;
+ text-align: justify;
+  font-size: 1.1rem;
+  
+}
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav a {
+  color: #fff; /* o el color actual que estés usando */
+  text-decoration: underline;
+  text-underline-offset: 4px; /* separa un poco la línea del texto */
+  transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #ccc; /* color al pasar el mouse */
+  text-decoration-color: #ccc; /* línea cambia de color también */
+}
+.footer-column i {
+  margin-right: 5px;
+  color: #fff; /* o el color que estés usando */
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 1px;
+}
+.logosRedes {
+  transition: transform 0.3s ease;
+}
+
+.logosRedes:hover {
+  transform: scale(1.1);
+}
+

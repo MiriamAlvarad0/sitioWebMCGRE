@@ -54,17 +54,16 @@ const routes = [
     name: "Subasta",
     component: Subasta
      },
-      {
+    {
     path: "/proveedor",
     name: "Proveedor",
     component: Proveedor
-    },
-    
-    
+    }
 
     
     
-    
+
+       
     
 
 ]
