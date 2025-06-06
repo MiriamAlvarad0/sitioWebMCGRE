@@ -30,7 +30,7 @@ import Footer from './components/Layout/Footer.vue'
 
 import './components/Styles/AppStyle.css'
 import '../src/components/Styles/FooterStyle.css'
-import './components/Styles/InventarioStyle.css'
+
 
 
 </script>

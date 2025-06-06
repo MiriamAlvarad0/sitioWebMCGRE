@@ -1,12 +1,12 @@
 <template>
   <div>
-    <b-card overlay class="bannerinicio" img-alt="Card Image" text-variant="white" title="Image Overlay"
+    <b-card overlay class="bannerDASHBOARD" img-alt="Card Image" text-variant="white" title="Image Overlay"
       sub-title="Subtitle">
       <b-card-text class="textobanner">
-        <h1> <span class="naranja">MCGREE EQUIPMENT</span> TU ALIADO </h1>
+        <h1> <span class="naranja">MCGRE EQUIPMENT</span> TU ALIADO </h1>
         <h1>EN MAQUINARIA PESADA</h1>
         <h1>CONFIABLE</h1>
-        <router-link class="botonbanner" :to="{ path: '/inventario' }"> Ver inventario </router-link>
+        <router-link class="botonbanner" to="/inventario"> Ver inventario </router-link>
       </b-card-text>
     </b-card>
   </div>
@@ -22,10 +22,16 @@
     </p>
 
     <div class="grid-categorias">
-      <router-link v-for="categoria in categorias" :key="categoria.nombre" :to="categoria.link" class="card-categoria">
-        <img :src="categoria.imagen" :alt="categoria.nombre" />
-        <h3>{{ categoria.nombre }}</h3>
-      </router-link>
+      <router-link
+  v-for="categoria in categorias"
+  :key="categoria.nombre"
+  :to="categoria.link"
+  class="card-categoria"
+>
+  <img :src="categoria.imagen" :alt="categoria.nombre" />
+  <h3>{{ categoria.nombre }}</h3>
+</router-link>
+
     </div>
 
     <!-- Subasta horizontal visualmente igual a las cards -->
@@ -57,27 +63,12 @@
 
 <script setup>
 const categorias = [
-  {
-    nombre: 'Grúas',
-    imagen: '/src/assets/gruas.jpg',
-    link: '/gruas',
-  },
-  {
-    nombre: 'Maquinaria Pesada',
-    imagen: '/src/assets/maquinariaPesada.jpg',
-    link: '/maquinariaPesada',
-  },
-  {
-    nombre: 'Equipos de Elevación',
-    imagen: '/src/assets/equipoElevacion.jpg',
-    link: '/elevacion',
-  },
-  {
-    nombre: 'Camiones',
-    imagen: '/src/assets/camiones.jpg',
-    link: '/camiones',
-  },
+  { nombre: 'Grúas', imagen: '/src/assets/gruas.jpg', link: { path: '/inventario', query: { categoria: 'Gruas' } } },
+  { nombre: 'Maquinaria Pesada', imagen: '/src/assets/maquinariaPesada.jpg', link: { path: '/inventario', query: { categoria: 'Maquinaria Pesada' } } },
+  { nombre: 'Equipos de Elevación', imagen: '/src/assets/equipoElevacion.jpg', link: { path: '/inventario', query: { categoria: 'Elevador' } } },
+  { nombre: 'Camiones', imagen: '/src/assets/camiones.jpg', link: { path: '/inventario', query: { categoria: 'Camiones' } } },
 ]
+
 
 const marcas = [
   { nombre: 'Caterpillar', imagen: '/src/assets/manitex.png' },
@@ -96,3 +87,5 @@ const marcas = [
 
 import "./Styles/InicioStyle.css"
 </script>
+
+

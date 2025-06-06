@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  background-color:  #f8f9fa;
+}
+.inventarioBanner {
+    background-image: url('/src/assets/inventarioBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40vh;
+    width: 100%;
+    padding: 0 5%;
+    position: relative;
+}
+.contacto {
+  padding: 5rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  max-width: 1600px !important;
+  width: 98vw !important;
+  margin: auto;
+}
+
+.contacto-header p {
+  font-size: 1.9rem;
+  color: #383838;
+  text-align: center;
+}
+
+
+.contenido-contacto {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1500px;
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  flex-wrap: wrap; 
+}
+
+
+.formulario {
+  background-color: #13213c;
+  color: #fcf9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  max-width: 700px;
+  width: 48%; 
+  min-width: 300px; 
+  margin-top: 2rem;
+  flex-shrink: 1;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.formulario h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.campos-dobles {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; 
+}
+
+.campos-dobles .campo {
+  flex: 1 1 45%;
+  min-width: 150px; 
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #fcf9f9;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #2c3954;
+  color: #fcf9f9;
+}
+
+textarea {
+  resize: none !important;
+  height: 100px;
+}
+
+.boton {
+  background-color: #fca311;
+  color: #fcf9f9;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40%;
+  font-size: 20px;
+  transition: background 0.3s ease;
+  align-self: center;
+}
+
+.boton:hover {
+  background-color: #e99400;
+}
+
+.card-info-horizontal {
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  overflow: visible;
+  max-width: 700px;
+  width: 48%;
+  min-width: 300px;
+  margin: 2rem 0 0 0;
+  flex-shrink: 1;
+  box-sizing: border-box;
+}
+
+
+.card-horizontal-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.mapa-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+}
+
+.datos-card {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  color: #16191f;
+  text-align: center;
+}
+
+.datos-card p {
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 1024px) {
+  .formulario,
+  .card-info-horizontal {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenido-contacto {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .formulario,
+  .card-info-horizontal {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 2rem auto;
+  }
+
+  .card-horizontal-content {
+    flex-direction: column;
+  }
+
+  .datos-card {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .campos-dobles {
+    flex-direction: column;
+  }
+
+  .campos-dobles .campo {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
+
+.texto-derecha {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.item-contacto {
+  text-align: left;
+}
+.hashtag {
+  margin-top: 2rem;
+  color: #1998d4;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 4vw, 2.2rem); 
+  word-wrap: break-word;
+  text-align: center; 
+  padding: 0 1rem; 
+}
+.iconoazul{
+ color: #fca311;
+}
+
+
+

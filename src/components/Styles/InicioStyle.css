@@ -20,7 +20,7 @@ body {
 } 
 
 /* Banner con imagen de fondo responsive */
-.bannerinicio {
+.bannerDASHBOARD {
   background-image: url('/src/assets/fondoinicio.jpeg');
   background-size: cover;
   background-position: center;
